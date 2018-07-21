@@ -2,3 +2,19 @@
 	background-color: red;
 	text-align: center;
 }
+
+.my-btns {
+	text-align: center;
+	display: inline:block;
+}
+
+.img-fluid {
+	max-width: 20%;
+	height: auto;
+}
+
+.container-fluid {
+	background-color: red;
+}
+
+

@@ -2,43 +2,84 @@
 <h1>Windows</h1>
 
 <p>Alright! Let's get started! First let's use the right click to create a folder on our Desktop. Let's call it.... Puppies! </p>
-
-<p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-<p>----------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+<img  class="img-fluid" src="part1.png">
 
 <p>Great! now we'll open that folder and create 2 more folders. one called "views", and one called "public". </p>
-
+<p></p>
 <p>-------------------------------------------------------------------------------------------------------------</p>
+<br>
 
-<p>-------------------------------------------------------------------------------------------------------------</p>
-
+<img  class="img-fluid" src="win2.png">
 <p>We'll explain those folders as we get to them. Now lets create the "spine" of the app. Go into your text editor of choice (mines <a href="https://www.sublimetext.com/3">Sublime</a> (it says you have to pay for it, but you really don't have to. you can also use Windows Notepad. Wow! That's alot of parentheses! get used to that! ))</p>
 
-<p>--------------------------------------------------------------------------------------------------------------------------------------</p>
 
-<p>--------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<img  class="img-fluid" src="win3.png">
 
 <p>
 		  	Notice the first line: require 'sinatra'. All this means is that this program needs the sinatra gem to be run, because this is the "spine" of the app if we don't specify how it will be run, nothing will happen.
 
 		  	On the third line we see "get '/' do". The '/' tells us that when we go to the website this is the page that opens up first and greets the user. 
 
-		  	The fourth line "erb :home" tells the program what page to render or show when we land on the page. erb means embedded Ruby which is a file type that combines Ruby and HTML to make webpages. Great! We have a spine for our application! lets see how it looks! 
+		  	The fourth line "erb :home" tells the program what page to render or show when we land on the page. erb means embedded Ruby which is a file type that combines Ruby and HTML to make webpages. Great! We have a spine for our application! Let's go back to the first line. It says "require 'sinatra' ". As we said earlier this program needs the sinatra gem to run. Lets install that now:
 		  	</p>
 
+		  	<img  class="img-fluid" src="sinatra_install.png">
 
-		  	<p>--------------------------------------------------------------------------------------------------------------------------</p>
+		  	<p></p>
+		  	<p>Notice that we had to move through the folders (also known as directories) to get to where we wanted to be. The command for this is "cd" which stands for "change directory". We have to go through every directory to get to the directory where the app lives. so we 'cd Desktop' (remember that capitalization matters!) to take us to our Desktop. Then we cd into the folder puppies with cd "puppies". Once we're into that directory we type "gem install sinatra" to... well... install the sinatra gem. Now we have to install the bundler to complete the installation process. Lets do that now...  </p>
+
+
+		  	<img  class="img-fluid" src="sinatra_install2.png">
+
+		  	<p></p>
+
+		  	<p>Lets use the command "bundle install" to finish installing the gems....</p>
+
+		  	<img  class="img-fluid" src="sinatra_install3.png">
+
+
+		  	<p>That didn't work! I tried it twice! Let's examine the error message. It says that it couldn't locate the gemfile. I guess we should make a Gemfile...</p>
+
+		  	<p></p>
+
+		  	<img  class="img-fluid" src="gemfile.png">
+
+		  	<p></p>
+
+		  	<p>So we made the Gemfile, which sets all of gems so we can install them. Let's fill up our new Gemfile...</p>
+
+		  	<img  class="img-fluid" src="gemfile2.png">
+
+		  	<p>Notice the first line "source 'https://rubygems.org'". This is the website that we will be downloading the gems from. Next comes the actual gems themselves which we explained earlier. let's install them...</p>
+
+			<img  class="img-fluid" src="gemfile3.png">	
+
+			<p></p>
+
+			OK! Let's finally see what our website looks like! In order to open the website type in "ruby main.rb"
+
+			<img  class="img-fluid" src="server.png">
+
+			<p>The reason we type "ruby main.rb" is we are calling on our "spine" that we created earlier to "control" the application. This is a scaled down version of what's called MVC (Model View Controller) frameworks. This might not mean anything to you now, but once you progress to Rails, which is a MVC framework coded in Ruby (just like Sinatra) this will be very helpful. Main.rb is the controller in this sense. Lets go to http://localhost:4567/ to see our work... </p>
+
+
+			<img  class="img-fluid" src="localhost.png">
+
 
 
 		  	<p>
-		  		Well that's not what we wanted! I know what I did wrong! I forgot to make page for home! Lets do that now!
+		  		Well that's not what we wanted! I know what I did wrong! I forgot to make a page for home! The home file will be saved as an erb file. erb stands for embedded ruby. Embedded ruby is a format that has both the attributes of ruby and of html. This makes it responsive to ruby webapps and easily styled like a regular webpage. Let's create it. 
 		  	</p>
 
+		  	<img  class="img-fluid" src="home.png">
 
-		  	<p>--------------------------------------------------------------------------------------------------------------------------</p>
 
-		  	<p>Let's click into the views folder that we created. Create a file called "home.erb and type this:</p>
+
+		  	<p>And lets refresh to see it on our local host. Hit refresh on your browser</p>
+
+			<img  class="img-fluid" src="home2.png">		  	
 
 		  	<p>--------------------------------------------------------------------------------------------------------------------------</p>
 
